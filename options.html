@@ -1,17 +1,38 @@
-<!DOCTYP html>
-<html lang="ja">
-<head>
-  <!-- Load JavaScript-->
-  <script src="js/lib/jquery.min.js"></script>
-  <script src="js/popup.js"></script>
-  <meta charset="utf-8">
-  <title>option</title>
-  <link rel="stylesheet" href="css/popup.css" type="text/css">
+<html><head>
+    <title>Readmine Options</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="options.css" type="text/css">
+
+    <script type="text/javascript" src="lib/jquery-1.6.1.min.js"></script>
+
 </head>
 <body>
-  <p>オプションのページ</p>
+    <div id="content">
+        <h1>
+            Options</h1>
+        <hr>
+        <div id="account">
+            <div class="label">
+                <span id="msg_account">Account</span></div>
+            <div class="s_settingform">
+                <input type="text" placeholder="Username" id="username">
+                <input type="password" placeholder="Password" id="password">
+                <div>
+                    <button id="auth" onclick="accountAuth();">
+                        <span id="msg_auth">auth</span></button>
+                    <span id="auth_result" class="message"></span>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <hr>
+        <div id="save">
+            <button onclick="saveOptions()">
+                <span id="msg_save">save</span></button>
+            <span id="save_result" class="message"></span>
+        </div>
+    </div>
 
 
-
-</body>
-</html>
+</body></html>
